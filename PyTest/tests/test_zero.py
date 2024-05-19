@@ -50,5 +50,14 @@ def test_recursion_depth():
     
     assert "maximum recursion depth exceeded" in str(e.value)
 
+def test_foo_not_implemented():
+    def foo():
+        raise NotImplementedError
+    
+    with pytest.raises(NotImplementedError) as e:
+        foo()
+    
+    assert e.type == NotImplementedError
+
     
 
