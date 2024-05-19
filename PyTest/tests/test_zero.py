@@ -23,10 +23,32 @@ def test_one_plus_two():
 
 
 def test_devided_by_zero():
+    """
+    Test if dividing 1 by 0 raises a ZeroDivisionError and if the error message contains the phrase "division by zero".
+    
+    This function does not take any parameters and does not return anything.
+    It raises an AssertionError if the division by zero does not raise a ZeroDivisionError or if the error message does not contain the phrase "division by zero".
+    """
     with pytest.raises(ZeroDivisionError) as e:
         num = 1/0
     
     assert "division by zero" in str(e.value)
+
+def test_recursion_depth():
+    """
+    Test the maximum recursion depth exceeded error by attempting to recursively call the function 'f' until the maximum depth is reached.
+    
+    This function does not take any parameters and does not return anything.
+    It raises an AssertionError if the error message does not contain the phrase "maximum recursion depth exceeded".
+    """
+    with pytest.raises(RuntimeError) as e:
+
+        def f():
+            f()
+
+        f()
+    
+    assert "maximum recursion depth exceeded" in str(e.value)
 
     
 
