@@ -1,19 +1,19 @@
 import pytest
-from stuff.accum import Accumulator
+# from stuff.accum import Accumulator
 
 
-@pytest.fixture
-def accum():
-    """
-    A fixture that returns an instance of the Accumulator class.
+# @pytest.fixture
+# def accum():
+    # """
+    # A fixture that returns an instance of the Accumulator class.
 
-    This fixture is used to create an instance of the Accumulator class and make it available for use in test functions. The fixture is decorated with the `@pytest.fixture` decorator, indicating that it is a fixture function.
+    # This fixture is used to create an instance of the Accumulator class and make it available for use in test functions. The fixture is decorated with the `@pytest.fixture` decorator, indicating that it is a fixture function.
 
-    Returns:
-        Accumulator: An instance of the Accumulator class.
+    # Returns:
+    #     Accumulator: An instance of the Accumulator class.
 
-    """
-    return Accumulator()
+    # """
+    # return Accumulator()
 
 def test_accumulator_init(accum):
     """
