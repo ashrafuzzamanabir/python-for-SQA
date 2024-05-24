@@ -6,6 +6,24 @@ from playwright.sync_api import Page, expect
 @pytest.mark.ui
 @pytest.mark.acme_bank
 def test_acme_bank_login(page: Page):
+  """
+  Function to test the login functionality of the Acme Bank website.
+
+  Parameters:
+  - page (Page): The Playwright Page object representing the browser page.
+
+  This function performs the following steps:
+  1. Navigates to the Acme Bank login page.
+  2. Fills in the username field with 'andy'.
+  3. Fills in the password field with 'i<3pandas'.
+  4. Clicks the login button.
+  5. Asserts that the logo, main menu, and various menu options are visible.
+
+  This function is marked with the pytest.mark.ui and pytest.mark.acme_bank markers.
+
+  Returns:
+  None
+  """
 
   # Arrange
   page.goto('https://demo.applitools.com/')
